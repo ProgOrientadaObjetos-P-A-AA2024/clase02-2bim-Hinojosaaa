@@ -40,7 +40,7 @@ public class Ejecutor2 {
             EstudiantePresencial presencial = new EstudiantePresencial(n,
                     ap, ced, edad, costo, creditos);
             presencial.calcularMatriculaPresencial();
-            cadena = String.format("%s\n", cadena, presencial);
+            cadena = String.format("%s\n%s\n", cadena, presencial);
             System.out.println("Desea salir, pulse S");
             entrada.nextLine();
             String opcion = entrada.nextLine();
