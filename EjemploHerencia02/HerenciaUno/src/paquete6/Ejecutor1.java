@@ -18,13 +18,16 @@ public class Ejecutor1 {
         double costoAsig = 50.5;
         
         EstudianteDistancia estDistancia = new EstudianteDistancia(nombre,
-                apellido, identificacion, edad, numAsignaturas, costoAsig);
+                apellido, identificacion, edad, numAsignaturas,
+                costoAsig);
         
         estDistancia.calcularMatriculaDistancia();
         
         System.out.printf("%s\n", estDistancia);
         
         System.out.println("--------------");
+        /*para que este pbjeto pueda funcionar debo utilizar para los establecer
+        para poder asignarle datos a mis atributos*/
         EstudianteDistancia estDistancia2 = new EstudianteDistancia(nombre,
                 apellido, identificacion, edad);
         estDistancia2.establecerCostoAsignatura(100);

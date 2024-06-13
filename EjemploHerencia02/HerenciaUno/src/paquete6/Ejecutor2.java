@@ -24,13 +24,27 @@ public class Ejecutor2 {
         boolean bandera = true;
         String cadena = "";
         
-        while(bandera){
-            System.out.println("ingresa un saludo");
-            String saludo = entrada.nextLine();
-            cadena = String.format("%s%s\n", cadena, saludo);
+        while (bandera) {
+            System.out.println("Ingrese nombre");
+            String n = entrada.nextLine();
+            System.out.println("Ingrese apellido");
+            String ap = entrada.nextLine();
+            System.out.println("Ingrese identificación");
+            String ced = entrada.nextLine();
+            System.out.println("Ingrese edad");
+            int edad = entrada.nextInt();
+            System.out.println("Ingrese número de créditos");
+            int creditos = entrada.nextInt();
+            System.out.println("Ingrese costo de los creditos: ");
+            double costo = entrada.nextDouble();
+            EstudiantePresencial presencial = new EstudiantePresencial(n,
+                    ap, ced, edad, costo, creditos);
+            presencial.calcularMatriculaPresencial();
+            cadena = String.format("%s\n", cadena, presencial);
             System.out.println("Desea salir, pulse S");
+            entrada.nextLine();
             String opcion = entrada.nextLine();
-            if(opcion.equals("S")){
+            if (opcion.equals("S")) {
                 bandera = false;
             }
         }
