@@ -1,6 +1,10 @@
 
 package paquete2;
-
+/*hay un error porque la clase hereda de Estudiante, pero como
+Estudiante tiene un constructor y esta clase no entonces Estudiante no
+sabe como heredar los datos que existe en su constructor.
+Para arreglar este problema debemos crear un constructor y hacer uso de la
+palabra reservada "super"*/
 public class EstudiantePresencial extends Estudiante{
     
     /*1.  Declarar

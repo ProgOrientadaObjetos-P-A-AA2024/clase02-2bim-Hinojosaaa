@@ -1,12 +1,13 @@
 
 package paquete3;
 
-public class EstudianteDistancia extends Estudiante{
+    public class EstudianteDistancia extends Estudiante{
     
     private int numeroAsignaturas;
     private double costoAsignatura;
     private double matriculaDistancia;
     
+    /**/
     public EstudianteDistancia(String n, String ap, String iden, int e){
         super(n, ap, iden, e);
     }
@@ -40,6 +41,20 @@ public class EstudianteDistancia extends Estudiante{
     // 7. Método obtenerMatriculaDistancia() : Real
     public double obtenerMatriculaDistancia(){
         return matriculaDistancia;
+    }
+    
+    @Override
+    public String toString(){
+        String cadena = String.format("%s\n"
+                + "Numero de asignaturas: %d\n"
+                + "Valor de asignatura: %.2f\n"
+                + "Valor de matricula: %.2f\n", 
+                super.toString(),
+                numeroAsignaturas,
+                costoAsignatura, 
+                obtenerMatriculaDistancia());
+        
+        return cadena;
     }
 
 }

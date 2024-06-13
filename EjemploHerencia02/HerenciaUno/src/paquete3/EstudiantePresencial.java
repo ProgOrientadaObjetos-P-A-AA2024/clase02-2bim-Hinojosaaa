@@ -44,4 +44,14 @@ public class EstudiantePresencial extends Estudiante{
         return matriculaPresencial;
     }
     
+    public String toString(){
+        String cadena = String.format("Apellido del estudiante: %s\n"
+                + "Identidicacion: %s\n"
+                + "Costo de matricula: %.2f\n",
+                apellidosEstudiante,
+                identificacionEstudiante,
+                matriculaPresencial);
+        return cadena;
+    }
+    
 }
